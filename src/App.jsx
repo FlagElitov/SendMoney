@@ -4,8 +4,8 @@ import Card from "./component/Card/Card";
 
 const App = () => {
   const [data, setData] = React.useState([
-    { id: 1, name: "Artur", balance: 1000, check: false },
-    { id: 2, name: "Denis", balance: 1000, check: false },
+    { id: 1, name: "Artur", balance: 1000 },
+    { id: 2, name: "Denis", balance: 1000 },
   ]);
 
   const toggleHandler = (id) => {
@@ -37,7 +37,6 @@ const App = () => {
             id={data.id}
             toggleHandler={toggleHandler}
             name={data.name}
-            check={data.check}
             balance={data.balance}
           />
         ))}
