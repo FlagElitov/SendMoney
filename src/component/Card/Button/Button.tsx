@@ -1,7 +1,15 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
 
-export default function ButtonComponent({ id, toggleHandler }) {
+interface ButtonComponentProps {
+  id: number;
+  toggleHandler: (id: number) => void;
+}
+
+const ButtonComponent: React.FC<ButtonComponentProps> = ({
+  id,
+  toggleHandler,
+}) => {
   return (
     <Button
       variant="contained"
@@ -11,4 +19,6 @@ export default function ButtonComponent({ id, toggleHandler }) {
       Отправить 100$
     </Button>
   );
-}
+};
+
+export default ButtonComponent;

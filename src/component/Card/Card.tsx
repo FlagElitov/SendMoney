@@ -1,7 +1,14 @@
 import React from "react";
 import ButtonComponent from "./Button/Button";
 
-const Card = ({ name, balance, id, toggleHandler }) => {
+interface CardProps {
+  name: string;
+  balance: number;
+  id: number;
+  toggleHandler: (id: number) => void;
+}
+
+const Card: React.FC<CardProps> = ({ name, balance, id, toggleHandler }) => {
   return (
     <div className="card">
       <div className="name"> {name}</div>

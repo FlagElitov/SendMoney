@@ -1,14 +1,19 @@
 import React from "react";
 import "./App.scss";
 import Card from "./component/Card/Card";
+type dataTypes = {
+  id: number;
+  name: string;
+  balance: number;
+};
 
-const App = () => {
-  const [data, setData] = React.useState([
+const App: React.FC = () => {
+  const [data, setData] = React.useState<dataTypes[]>([
     { id: 1, name: "Artur", balance: 1000 },
     { id: 2, name: "Denis", balance: 1000 },
   ]);
 
-  const toggleHandler = (id) => {
+  const toggleHandler = (id: number) => {
     setData((prev) =>
       prev.map((data) => {
         if (data.id !== id) {
@@ -31,7 +36,7 @@ const App = () => {
   return (
     <div className="container">
       <div className="cards">
-        {data.map((data) => (
+        {data.map((data: dataTypes) => (
           <Card
             key={data.id}
             id={data.id}
