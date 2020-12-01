@@ -8,6 +8,7 @@ exports[`Unit Testing App component App Snapshot 1`] = `
     className="name"
   >
      
+    Petro
   </div>
   <div
     className="text"
@@ -17,12 +18,15 @@ exports[`Unit Testing App component App Snapshot 1`] = `
   <div
     className="balance"
   >
+    500
     $
   </div>
   <div
     className="button"
   >
-    <ButtonComponent />
+    <ButtonComponent
+      id="2"
+    />
   </div>
 </div>
 `;
